@@ -33,13 +33,13 @@ export default function SideNavMain() {
                             sizeString="25"
                         />
                     </Link>
-                    <Link href="/Following">
+                    <Link href="/">
                         <MenuItem iconString="Following" colorString={pathname == '/Following' ? '#F02C56' : '#f0f0f0'} sizeString="25"/>
                     </Link>
-                    <Link href="/Messages">
+                    <Link href="/">
                         <MenuItem iconString="Messages" colorString={pathname == '/Messages' ? '#F02C56' : '#f0f0f0'} sizeString="25"/>
                     </Link>
-                    <Link href="/Notification">
+                    <Link href="/">
                         <MenuItem iconString="Notification" colorString={pathname == '/Notification' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>
                     </Link>
 
