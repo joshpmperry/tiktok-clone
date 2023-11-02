@@ -3,7 +3,7 @@
 import Comments from "@/app/components/post/Comments"
 import CommentsHeader from "@/app/components/post/CommentsHeader"
 import Link from "next/link"
-import { useEffect } from "react"
+import { Suspense, useEffect } from "react"
 import { AiOutlineClose } from "react-icons/ai"
 import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 import { useRouter } from "next/navigation"
@@ -88,17 +88,19 @@ export default function Post({ params }: PostPageTypes) {
                                 src={useCreateBucketUrl(postById?.video_url)}
                             />
                         ) : null}
-
+                        
                         <div className="bg-black bg-opacity-70 lg:min-w-[480px] z-10 relative">
                             {postById?.video_url ? (
-                                <video 
-                                    autoPlay
-                                    controls
-                                    loop
-                                    muted
-                                    className="h-screen mx-auto" 
-                                    src={useCreateBucketUrl(postById.video_url)}
-                                />
+                                <Suspense fallback={<p>Loading...</p>}>
+                                    <video 
+                                        autoPlay
+                                        controls
+                                        loop
+                                        muted
+                                        className="h-screen mx-auto" 
+                                        src={useCreateBucketUrl(postById.video_url)}
+                                    />
+                                </Suspense>
                             ) : null}
                         </div>
                     </ClientOnly>

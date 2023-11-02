@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { Suspense, useEffect } from "react"
 import MainLayout from "./layouts/MainLayout"
 import { usePostStore } from "@/app/stores/post"
 import ClientOnly from "./components/ClientOnly"
@@ -13,11 +13,13 @@ export default function Home() {
     <>
       <MainLayout>
         <div className="mt-[80px]  w-[calc(100%-90px)] max-w-[690px] ml-auto">
-          <ClientOnly>
-            {allPosts.map((post, index) => (
-              <PostMain post={post} key={index} />
-            ))}
-          </ClientOnly>
+          <Suspense fallback={<p>Loading feed...</p>}>
+            <ClientOnly>
+              {allPosts.map((post, index) => (
+                <PostMain post={post} key={index} />
+                ))}
+            </ClientOnly>
+          </Suspense>
         </div>
       </MainLayout>
     </>

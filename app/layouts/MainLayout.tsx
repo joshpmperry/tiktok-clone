@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from "react"
 import SideNavMain from "./includes/SideNavMain"
 import TopNav from "./includes/TopNav"
 import { usePathname } from "next/navigation"
@@ -9,10 +9,12 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     return (
       	<>
 			<TopNav/>
-			<div className={`bg-[#2a2929] flex justify-between mx-auto w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}>
-				<SideNavMain />
-				{children}
-			</div>
+			<Suspense fallback={<p>Loading...</p>}>
+				<div className={`bg-[#2a2929] flex justify-between mx-auto w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}>
+					<SideNavMain />
+					{children}
+				</div>
+			</Suspense>
       	</>
     )
 }

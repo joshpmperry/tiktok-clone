@@ -34,10 +34,10 @@ export default function SideNavMain() {
                         />
                     </Link>
                     <Link href="/">
-                        <MenuItem iconString="Following" colorString={pathname == '/Following' ? '#F02C56' : '#f0f0f0'} sizeString="25"/>
+                        <MenuItem iconString="Following" colorString={pathname == '/Following' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>
                     </Link>
                     <Link href="/">
-                        <MenuItem iconString="Messages" colorString={pathname == '/Messages' ? '#F02C56' : '#f0f0f0'} sizeString="25"/>
+                        <MenuItem iconString="Messages" colorString={pathname == '/Messages' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>
                     </Link>
                     <Link href="/">
                         <MenuItem iconString="Notification" colorString={pathname == '/Notification' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>

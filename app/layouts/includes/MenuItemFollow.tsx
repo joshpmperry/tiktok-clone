@@ -1,7 +1,6 @@
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
 import { MenuItemFollowCompTypes } from "@/app/types"
 import Link from "next/link"
-import { AiOutlineCheck } from "react-icons/ai"
 
 export default function MenuItemFollow({ user }: MenuItemFollowCompTypes) {
     

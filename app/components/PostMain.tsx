@@ -1,9 +1,8 @@
 "use client"
 
-import { AiFillHeart } from "react-icons/ai"
-import { ImMusic } from "react-icons/im"
+
 import Link from "next/link"
-import { useEffect } from "react"
+import { Suspense, useEffect } from "react"
 import PostMainLikes from "./PostMainLikes"
 import useCreateBucketUrl from "../hooks/useCreateBucketUrl"
 import { PostMainCompTypes } from "../types"
@@ -28,7 +27,9 @@ export default function PostMain({ post }: PostMainCompTypes) {
             <div id={`PostMain-${post.id}`} className="flex border-b py-6">
 
                 <div className="cursor-pointer">
+                <Suspense fallback={<p>Loading...</p>}>
                     <img className="rounded-full max-h-[60px]" width="60" src={useCreateBucketUrl(post?.profile?.image)} />
+                </Suspense>
                 </div>
 
                 <div className="pl-3 w-full px-4">
@@ -49,14 +50,16 @@ export default function PostMain({ post }: PostMainCompTypes) {
                         <div
                             className="relative min-h-[480px] max-h-[580px] max-w-[260px] flex items-center bg-black rounded-xl cursor-pointer"
                         >
-                            <video 
-                                id={`video-${post.id}`}
-                                loop
-                                controls
-                                muted
-                                className="rounded-xl object-cover mx-auto h-full" 
-                                src={useCreateBucketUrl(post?.video_url)}
-                            />
+                            <Suspense fallback={<p>Loading feed...</p>}>
+                                <video 
+                                    id={`video-${post.id}`}
+                                    loop
+                                    controls
+                                    muted
+                                    className="rounded-xl object-cover mx-auto h-full" 
+                                    src={useCreateBucketUrl(post?.video_url)}
+                                    />
+                            </Suspense>
                         </div>
                         
                         <PostMainLikes post={post} />
