@@ -57,11 +57,6 @@ export default function PostMain({ post }: PostMainCompTypes) {
                                 className="rounded-xl object-cover mx-auto h-full" 
                                 src={useCreateBucketUrl(post?.video_url)}
                             />
-                            <img 
-                                className="absolute right-2 bottom-10" 
-                                width="90" 
-                                src="/images/tiktok-logo-white.png"
-                            />
                         </div>
                         
                         <PostMainLikes post={post} />
