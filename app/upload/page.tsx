@@ -118,7 +118,7 @@ export default function Upload() {
                                 <p className="mt-1.5 text-gray-500 text-[13px]">Or drag and drop a file</p>
                                 <p className="mt-12 text-gray-400 text-sm">MP4</p>
                                 <p className="mt-2 text-gray-400 text-[13px]">Up to 60 Seconds</p>
-                                <p className="mt-2 text-gray-400 text-[13px]">Less than 2 GB</p>
+                                <p className="mt-2 text-gray-400 text-[13px]">Less than 128 mb</p>
                                 <label 
                                     htmlFor="fileInput" 
                                     className="px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#CF7B13] rounded-sm cursor-pointer"
