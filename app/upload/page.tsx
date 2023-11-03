@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import UploadLayout from "../layouts/UploadLayout";
 import { BiLoaderCircle, BiSolidCloudUpload } from "react-icons/bi"
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { PiKnifeLight } from 'react-icons/pi'
 import { useRouter } from "next/navigation";
 import { useUser } from "@/app/context/user"
 import { UploadError } from "../types";
