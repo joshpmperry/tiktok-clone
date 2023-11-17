@@ -36,8 +36,8 @@ export default function SideNavMain() {
                     <Link href="/">
                         <MenuItem iconString="Following" colorString={pathname == '/Following' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
                     </Link>
-                    <Link href={`http://localhost:3001/`}>
-                        <MenuItem iconString="Messages" colorString={pathname == 'http://localhost:3001/' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
+                    <Link href={`https://realtime-chat-tiktok.vercel.app/`}>
+                        <MenuItem iconString="Messages" colorString={pathname == 'https://realtime-chat-tiktok.vercel.app/' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
                     </Link>
                     <Link href="/">
                         <MenuItem iconString="Notification" colorString={pathname == '/Notification' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
