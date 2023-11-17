@@ -54,7 +54,6 @@ export interface PostWithProfile {
     video_url: string;
     text: string;
     created_at: string;
-    views: string;
     profile: {
         user_id: string;
         name: string;

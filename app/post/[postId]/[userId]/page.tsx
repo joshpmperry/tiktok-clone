@@ -8,12 +8,11 @@ import { AiOutlineClose } from "react-icons/ai"
 import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 import { useRouter } from "next/navigation"
 import ClientOnly from "@/app/components/ClientOnly"
-import { Post, PostPageTypes } from "@/app/types"
+import { PostPageTypes } from "@/app/types"
 import { usePostStore } from "@/app/stores/post"
 import { useLikeStore } from "@/app/stores/like"
 import { useCommentStore } from "@/app/stores/comment"
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
-import useUpdateViewsByPostId from "@/app/hooks/useUpdateViewsByPostId"
 
 export default function Post({ params }: PostPageTypes) {
 
@@ -27,8 +26,7 @@ export default function Post({ params }: PostPageTypes) {
         setPostById(params.postId)
         setCommentsByPost(params.postId) 
         setLikesByPost(params.postId)
-        setPostsByUser(params.userId) 
-        useUpdateViewsByPostId(params.postId, params.views+1)
+        setPostsByUser(params.userId)
     }, [])
 
     const loopThroughPostsUp = () => {
