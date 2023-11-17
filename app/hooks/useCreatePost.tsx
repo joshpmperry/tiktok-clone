@@ -13,7 +13,7 @@ const useCreatePost = async (file: File, userId: string, caption: string) => {
             text: caption,
             video_url: videoId,
             created_at: new Date().toISOString(),
-            views: 1
+            views: 13
         });
         await storage.createFile(String(process.env.NEXT_PUBLIC_BUCKET_ID), videoId, file)
     } catch (error) {

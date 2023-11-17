@@ -103,7 +103,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                             )}
                             
                         </button>
-                        <span className="text-xs text-white font-semibold">
+                        <span className="text-xs text-black font-semibold">
                             {likes?.length}
                         </span>
                     </div>
@@ -119,13 +119,13 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                             <FaCommentDots size="25"/>
                         </div>
-                        <span className="text-xs text-white font-semibold">{comments?.length}</span>
+                        <span className="text-xs text-black font-semibold">{comments?.length}</span>
                     </button>
                     <div className="text-center">
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                                 <FaEye size="25"/>
                         </div>
-                        <span className="text-xs text-center text-white font-semibold">{post?.views}</span>
+                        <span className="text-xs text-center text-black font-semibold">{post?.views}</span>
                     </div>
                 </div>
             </div>

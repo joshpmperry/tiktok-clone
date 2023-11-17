@@ -19,7 +19,6 @@ const useGetAllPosts = async () => {
                 video_url: doc?.video_url,
                 text: doc?.text,
                 created_at: doc?.created_at,
-                views: doc?.views,
                 profile: {
                     user_id: profile?.user_id,
                     name: profile?.name,
