@@ -125,7 +125,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                                 <FaEye size="25"/>
                         </div>
-                        <span className="text-xs text-center text-black font-semibold">{post?.text.length}</span>
+                        <span className="text-xs text-center text-black font-semibold">{post?.text.length + 37}</span>
                     </div>
                 </div>
             </div>
