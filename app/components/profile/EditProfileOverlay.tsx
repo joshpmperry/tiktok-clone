@@ -258,7 +258,7 @@ export default function EditProfileOverlay() {
                                 <button 
                                     disabled={isUpdating}
                                     onClick={() => updateUserInfo()}
-                                    className="flex items-center bg-[#5647ae] text-white border rounded-md ml-3 px-3 py-[6px]"
+                                    className="flex items-center bg-[#FF4533] text-white border rounded-md ml-3 px-3 py-[6px]"
                                 >
                                     <span className="mx-4 font-medium text-[15px]">
                                         {isUpdating ? <BiLoaderCircle color="#ffffff" className="my-1 mx-2.5 animate-spin" /> : "Save" }
@@ -278,7 +278,7 @@ export default function EditProfileOverlay() {
 
                                 <button 
                                     onClick={() => cropAndUpdateImage()}
-                                    className="flex items-center bg-[#5647ae] text-white border rounded-md ml-3 px-3 py-[6px]"
+                                    className="flex items-center bg-[#FF4533] text-white border rounded-md ml-3 px-3 py-[6px]"
                                 >
                                     <span className="mx-4 font-medium text-[15px]">
                                         {isUpdating ? <BiLoaderCircle color="#ffffff" className="my-1 mx-2.5 animate-spin" /> : "Apply" }

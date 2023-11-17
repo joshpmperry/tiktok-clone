@@ -37,7 +37,7 @@ export default function PostUser({ post }: PostUserCompTypes) {
                     </Link>
                 )}
                 <div className="px-1">
-                    <p className="text-white text-[15px] pt-1 break-words">
+                    <p className="text-black text-[15px] pt-1 break-words">
                         {post.text}
                     </p>
                 </div>

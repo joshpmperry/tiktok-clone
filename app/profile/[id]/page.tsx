@@ -42,8 +42,8 @@ export default function Profile({ params }: ProfilePageTypes) {
                             <ClientOnly>
                                 {(currentProfile as User)?.name ? (
                                     <div>
-                                        <p className="text-[30px] font-bold truncate text-[#5647ae]">{currentProfile?.name}</p>
-                                        <p className="text-[18px] truncate text-white">{currentProfile?.name}</p>
+                                        <p className="text-[30px] font-bold truncate text-[#FF4533]">{currentProfile?.name}</p>
+                                        <p className="text-[18px] truncate text-[#5C5656]">{currentProfile?.name}</p>
                                     </div>
                                 ) : (
                                     <div className="h-[60px]" />
@@ -57,10 +57,10 @@ export default function Profile({ params }: ProfilePageTypes) {
                                     className="flex item-center rounded-md py-1.5 px-3.5 mt-3 text-[15px] font-semibold border bg-gray-50 hover:bg-[#e3e3e3]"
                                 >
                                     <BsPencil className="mt-0.5 mr-1 text-[#545151]" size="18"/>
-                                    <span className="text-[#545151] hover:text-[#5647ae]">Edit profile</span>
+                                    <span className="text-[#545151] hover:text-[#FF4533]">Edit profile</span>
                                 </button>
                             ) : (
-                                <button className="flex item-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#5647ae]">
+                                <button className="flex item-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#FF4533]">
                                     Follow
                                 </button>
                             )}
@@ -71,11 +71,11 @@ export default function Profile({ params }: ProfilePageTypes) {
                     <div className="flex items-center pt-4">
                         <div className="mr-4">
                             <span className="font-bold text-white">-</span>
-                            <span className="text-[#e3e3e3] font-light text-[15px] pl-1.5">Following</span>
+                            <span className="text-[#5C5656] font-light text-[15px] pl-1.5">Following</span>
                         </div>
                         <div className="mr-4">
                             <span className="font-bold text-white">-</span>
-                            <span className="text-[#e3e3e3] font-light text-[15px] pl-1.5">Followers</span>
+                            <span className="text-[#5C5656] font-light text-[15px] pl-1.5">Followers</span>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@ export default function Profile({ params }: ProfilePageTypes) {
                     </ClientOnly>
 
                     <ul className="w-full flex items-center pt-4 border-b">
-                        <li className="w-60 text-center py-2 text-[17px] text-[#e3e3e3] font-semibold border-b-2 border-b-black">Videos</li>
+                        <li className="w-60 text-center py-2 text-[17px] text-black font-semibold border-b-2 border-b-black">Videos</li>
                     </ul>
 
                     <ClientOnly>
