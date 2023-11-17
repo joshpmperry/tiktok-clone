@@ -33,14 +33,14 @@ export default function PostMain({ post }: PostMainCompTypes) {
                 </div>
 
                 <div className="pl-3 w-full px-4">
-                    <div className="flex items-center justify-between pb-0.5 text-[#5647ae]">
+                    <div className="flex items-center justify-between pb-0.5 text-[#BF3427]">
                         <Link href={`/profile/${post.profile.user_id}`}>
                             <span className="font-bold hover:underline cursor-pointer">
                                 {post.profile.name}
                             </span>
                         </Link>
                     </div>
-                    <p className="text-[15px] pb-0.5 break-words md:max-w-[400px] max-w-[300px] text-[#f0f0f0]">{post.text}</p>
+                    <p className="text-[15px] pb-0.5 break-words md:max-w-[400px] max-w-[300px] text-black">{post.text}</p>
 
                     <div className="mt-2.5 flex">
                         <div
