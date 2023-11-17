@@ -18,6 +18,7 @@ const useGetPostsByUser = async (userId: string) => {
                 video_url: doc?.video_url,
                 text: doc?.text,
                 created_at: doc?.created_at,
+                views: doc?.views
             }
         })
         

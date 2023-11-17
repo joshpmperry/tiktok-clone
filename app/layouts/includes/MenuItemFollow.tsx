@@ -17,7 +17,7 @@ export default function MenuItemFollow({ user }: MenuItemFollowCompTypes) {
                 />
                 <div className="lg:pl-2.5 lg:block hidden">
                     <div className="flex items-center">
-                        <p className="font-bold text-[14px] truncate text-[#5647ae]">
+                        <p className="font-bold text-[14px] truncate text-[#FF4533]">
                             {user?.name}
                         </p>
                     </div>

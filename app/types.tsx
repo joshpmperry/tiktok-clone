@@ -46,6 +46,7 @@ export interface Post {
     video_url: string;
     text: string;
     created_at: string;
+    views : string;
 }
 
 export interface PostWithProfile {
@@ -54,6 +55,7 @@ export interface PostWithProfile {
     video_url: string;
     text: string;
     created_at: string;
+    views: string;
     profile: {
         user_id: string;
         name: string;
@@ -67,6 +69,7 @@ export interface CommentWithProfile {
     post_id: string;
     text: string;
     created_at: string;
+    views: string;
     profile: {
         user_id: string;
         name: string;
@@ -106,7 +109,7 @@ export interface CommentsCompTypes {
 }
 
 export interface PostPageTypes {
-    params: { userId: string; postId: string; };
+    params: { userId: string; postId: string; views: string};
 }
 
 export interface ProfilePageTypes {

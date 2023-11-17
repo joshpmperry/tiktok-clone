@@ -1,5 +1,5 @@
 import { AiFillHeart } from "react-icons/ai"
-import { FaShare, FaCommentDots } from "react-icons/fa"
+import { FaEye, FaCommentDots } from "react-icons/fa"
 import { useEffect, useState } from "react"
 import { useUser } from "../context/user"
 import { BiLoaderCircle } from "react-icons/bi"
@@ -109,7 +109,11 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                     </div>
 
                     <button 
-                        onClick={() => router.push(`/post/${post?.id}/${post?.profile?.user_id}`)} 
+                        onClick={
+                            () =>
+                                 
+                                router.push(`/post/${post?.id}/${post?.profile?.user_id}`)
+                    } 
                         className="pb-4 text-center"
                     >
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
@@ -117,6 +121,12 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         </div>
                         <span className="text-xs text-white font-semibold">{comments?.length}</span>
                     </button>
+                    <div className="text-center">
+                        <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
+                                <FaEye size="25"/>
+                        </div>
+                        <span className="text-xs text-center text-white font-semibold">{post?.views}</span>
+                    </div>
                 </div>
             </div>
         </>

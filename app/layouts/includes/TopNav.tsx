@@ -44,18 +44,18 @@ export default function TopNav() {
 
     return (
         <>
-            <div id="TopNav" className="fixed bg-[#121212] z-30 flex items-center w-full border-b h-[60px]">
+            <div id="TopNav" className="fixed bg-[#030303] z-30 flex items-center w-full border-b h-[60px]">
                 <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto ${pathname === '/' ? 'max-w-[1150px]' : ''}`}>
 
                     <Link href="/">
                         <img className="min-w-[115px] w-[115px]" src="/images/tiktok-logo-white.png"/>
                     </Link>
 
-                    <div className="relative hidden md:flex items-center justify-end bg-[#F1F1F2] p-1 rounded-full max-w-[430px] w-full">
+                    <div className="relative hidden md:flex items-center justify-end bg-[#f3f3f3b0] p-1 rounded-full max-w-[430px] w-full">
                             <input 
                                 type="text" 
                                 onChange={handleSearchName}
-                                className="w-full pl-3 my-2 bg-transparent placeholder-[#838383] text-[15px] focus:outline-none"
+                                className="w-full pl-3 my-2 bg-transparent placeholder-white text-[15px] focus:outline-none"
                                 placeholder="Search accounts"
                             />
 
@@ -65,7 +65,7 @@ export default function TopNav() {
                                         <div className="p-1" key={index}>
                                             <Link 
                                                 href={`/profile/${profile?.id}`}
-                                                className="flex items-center justify-between w-full cursor-pointer hover:bg-[#5647ae] p-1 px-2 hover:text-white"
+                                                className="flex items-center justify-between w-full cursor-pointer hover:bg-[#FF4533] p-1 px-2 hover:text-white"
                                             >
                                                 <div className="flex items-center">
                                                     <img className="rounded-md" width="40" src={useCreateBucketUrl(profile?.image)} />
@@ -78,17 +78,17 @@ export default function TopNav() {
                             : null}
 
                             <div className="px-3 py-1 flex items-center border-l border-l-gray-300">
-                                <BiSearch color="#A1A2A7" size="22" />
+                                <BiSearch color="#020202" size="22" />
                             </div>
                     </div>
 
                     <div className="flex items-center gap-3 ">
                         <button 
                             onClick={() => goTo()}
-                            className="flex items-center border rounded-sm py-[6px] hover:bg-gray-100 pl-1.5"
+                            className="flex items-center border rounded-sm py-[6px] bg-white hover:bg-gray-200 pl-1.5"
                         >
-                            <AiOutlinePlus color="#5647ae" size="22"/>
-                            <span className="px-2 font-medium text-[15px] text-[#5647ae]">Upload</span>
+                            <AiOutlinePlus color="#FF4533" size="22"/>
+                            <span className="px-2 font-medium text-[15px] text-[#FF4533]">Upload</span>
                         </button>
 
                         {!userContext?.user?.id ? (

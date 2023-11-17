@@ -20,7 +20,7 @@ export default function SideNavMain() {
             <div 
                 id="SideNavMain" 
                 className={`
-                    fixed z-20 bg-[#252424] pt-[70px] h-full lg:border-r-0 border-r w-[75px] overflow-auto
+                    fixed z-20 bg-[#5C5656] pt-[70px] h-full lg:border-r-0 border-r w-[75px] overflow-auto
                     ${pathname === '/' ? 'lg:w-[310px]' : 'lg:w-[220px]'}
                 `}
             >
@@ -29,18 +29,18 @@ export default function SideNavMain() {
                     <Link href="/">
                         <MenuItem 
                             iconString="For You" 
-                            colorString={pathname == '/' ? '#5647ae' : '#f0f0f0'} 
+                            colorString={pathname == '/' ? '#FF4533' : '#f0f0f0'} 
                             sizeString="25"
                         />
                     </Link>
                     <Link href="/">
-                        <MenuItem iconString="Following" colorString={pathname == '/Following' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>
+                        <MenuItem iconString="Following" colorString={pathname == '/Following' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
+                    </Link>
+                    <Link href={`http://localhost:3001/`}>
+                        <MenuItem iconString="Messages" colorString={pathname == 'http://localhost:3001/' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
                     </Link>
                     <Link href="/">
-                        <MenuItem iconString="Messages" colorString={pathname == '/Messages' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>
-                    </Link>
-                    <Link href="/">
-                        <MenuItem iconString="Notification" colorString={pathname == '/Notification' ? '#5647ae' : '#f0f0f0'} sizeString="25"/>
+                        <MenuItem iconString="Notification" colorString={pathname == '/Notification' ? '#FF4533' : '#f0f0f0'} sizeString="25"/>
                     </Link>
 
                     <div className="border-b lg:ml-2 mt-2" />
@@ -55,7 +55,7 @@ export default function SideNavMain() {
                         </div>
                     </ClientOnly>
 
-                    <button className="lg:block hidden text-[#CF7B13] pt-1.5 pl-2 text-[13px]">See all</button>
+                    <button className="lg:block hidden text-white pt-1.5 pl-2 text-[13px]">See all</button>
 
                     {contextUser?.user?.id ? (
                         <div >
@@ -71,7 +71,7 @@ export default function SideNavMain() {
                                 </div>
                             </ClientOnly>
 
-                            <button className="lg:block hidden text-[#CF7B13] pt-1.5 pl-2 text-[13px]">See more</button>
+                            <button className="lg:block hidden text-white pt-1.5 pl-2 text-[13px]">See more</button>
                         </div>
                     ) : null}
                     <div className="lg:block hidden border-b lg:ml-2 mt-2" />

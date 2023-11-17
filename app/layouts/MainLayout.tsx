@@ -6,16 +6,18 @@ import { usePathname } from "next/navigation"
 export default function MainLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname()
 
+
+
     return (
-      	<>
-			<TopNav/>
-			<Suspense fallback={<p>Loading...</p>}>
-				<div className={`bg-[#2a2929] flex justify-between mx-auto w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}>
-					<SideNavMain />
-					{children}
-				</div>
-			</Suspense>
-      	</>
+      <>
+				<TopNav/>
+				<Suspense fallback={<p>Loading...</p>}>
+					<div className={`bg-[#FFFFFF] flex justify-between mx-auto w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}>
+						<SideNavMain />
+						{children}
+					</div>
+				</Suspense>
+      </>
     )
 }
   

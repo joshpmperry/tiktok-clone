@@ -13,6 +13,7 @@ import { usePostStore } from "@/app/stores/post"
 import { useLikeStore } from "@/app/stores/like"
 import { useCommentStore } from "@/app/stores/comment"
 import useCreateBucketUrl from "@/app/hooks/useCreateBucketUrl"
+import useUpdateViewsByPostId from "@/app/hooks/useUpdateViewsByPostId"
 
 export default function Post({ params }: PostPageTypes) {
 
@@ -27,6 +28,7 @@ export default function Post({ params }: PostPageTypes) {
         setCommentsByPost(params.postId) 
         setLikesByPost(params.postId)
         setPostsByUser(params.userId) 
+        useUpdateViewsByPostId(params.postId, params.views+1)
     }, [])
 
     const loopThroughPostsUp = () => {

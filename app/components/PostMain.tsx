@@ -21,7 +21,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
             observer.observe(postMainElement);
         }
     }, [])
-
+    
     return (
         <>
             <div id={`PostMain-${post.id}`} className="flex border-b py-6">
@@ -39,10 +39,6 @@ export default function PostMain({ post }: PostMainCompTypes) {
                                 {post.profile.name}
                             </span>
                         </Link>
-
-                        <button className="border text-[15px] px-[21px] py-0.5 border-[#5647ae] text-[#5647ae] hover:bg-[#ffeef2] font-semibold rounded-md">
-                            Follow
-                        </button>
                     </div>
                     <p className="text-[15px] pb-0.5 break-words md:max-w-[400px] max-w-[300px] text-[#f0f0f0]">{post.text}</p>
 
@@ -53,7 +49,7 @@ export default function PostMain({ post }: PostMainCompTypes) {
                             <Suspense fallback={<p>Loading feed...</p>}>
                                 <video 
                                     id={`video-${post.id}`}
-                                    loop
+                                    autoPlay={false}
                                     controls
                                     muted
                                     className="rounded-xl object-cover mx-auto h-full" 

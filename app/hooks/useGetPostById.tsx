@@ -17,6 +17,7 @@ const useGetPostById = async (id: string) => {
             video_url: post?.video_url,
             text: post?.text,
             created_at: post?.created_at,
+            views : post?.views,
             profile: {
                 user_id: profile?.user_id,  
                 name: profile?.name,
